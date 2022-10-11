@@ -1,11 +1,11 @@
-age_group, no_of_cases
-age_0_17_yr, 3.0
-age_18_24_yr, 232.0
-age_25_34_yr, 1473.0
-age_35_44_yr, 1232.0
-age_45_54_yr, 484.0
-age_55_64_yr, 163.0
-age_65_74_yr, 18.0
-age_75_84_yr, 1.0
-age_85_plus_yr, 0.0
-age_unk, 0.0
+age_group,no_of_cases
+age_0_17_yr,3.0
+age_18_24_yr,232.0
+age_25_34_yr,1473.0
+age_35_44_yr,1232.0
+age_45_54_yr,484.0
+age_55_64_yr,163.0
+age_65_74_yr,18.0
+age_75_84_yr,1.0
+age_85_plus_yr,0.0
+age_unk,0.0
