@@ -19,7 +19,7 @@
         "fields": ["total_cases_per_million"]
       }
     },
-    {"calculate": "datum.total_cases_per_million + 0.1", "as": "Total Cases"}
+    { "as": "Total Cases"}
   ],
     "mark": {"type": "geoshape"},
   "encoding": {
