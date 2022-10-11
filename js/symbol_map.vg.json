@@ -10,18 +10,14 @@
   },
   {
     "data": {
-      "url": "https://raw.githubusercontent.com/Manan-python/try1/main/data/zomato5.csv"
+      "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxLast.csv"
     },
     "mark": {"type": "geoshape", "tooltip": {"content": "data"}},
   "encoding": {
     "color": {
-      "field": "Active Cases",
+      "field": "total_cases_per_million",
       "type": "quantitative",
       "scale": {"type": "log"}
-    },
-    "tooltip": [
-      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Active", "type": "quantitative"}
-    ]
+    }
   }
 }
