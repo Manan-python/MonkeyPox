@@ -18,14 +18,14 @@
         "key": "location",
         "fields": ["total_cases_per_million"]
       }
-    },
-    { "as": "Total Cases"}
+    }
   ],
     "mark": {"type": "geoshape"},
   "encoding": {
-    "color": {
-      "field": "Total Cases",
-      "type": "quantitative"
-    }
+      "color": {
+        "field": "total_cases_per_million",
+        "type": "quantitative"
+      }
+
   }
 }
