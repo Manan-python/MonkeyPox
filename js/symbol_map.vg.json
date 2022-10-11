@@ -20,12 +20,12 @@
 
   "transform": [
     {
-      "lookup": "properties.NAME",
+      "lookup": "properties.ISO_A3",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxDB.csv"
+          "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxFinal.csv"
         },
-        "key": "location",
+        "key": "iso_code",
         "fields": ["total_cases_per_million"]
       }
     }
