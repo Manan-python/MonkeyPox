@@ -1,26 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
 
 
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/styles2.css" media="all">
 
 </head>
 <body>
-  <p>
-hi
-</p>
-<div id="symbol_map"></div>
+<div class="main-page">
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <h1>Fires in Australia</h1>
+      <p class="heading-subtext">
+        Bushfires in Australia are a widespread and regular occurrence that have contributed
+         significantly to shaping the nature of the continent over millions of years. In addition to loss of life, homes,
+         properties, and livestock are destroyed potentially leaving people homeless,
+         traumatized, and without access to electricity, telecommunications and, in some cases, to drinking water
+      </p>
+    </div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1-1 l-box">
+      <h2>Map Of Fires in Australia</h2>
+      <p>The below map provides an accurate representation of Fires in Australia caught by Satellite Imaging.
+        I have tried to recreate the image of Australia from space as seen by one of these satellites if all fires were to
+        burn at the same time. The darker spots represent brighter, more powerful fires, whereas the size of the spots indicate
+        how widespread that fire was.
+      </p>
+    </div>
+  </div>
+  <div class="pure-g">
+      <div class="pure-u-1-1 l-box">
+        <div id="symbol_map", class = "vis-container">
+        </div>
+      </div>
+  </div>
+  <p></p>
+  <div class="pure-g">
+    <div class="pure-u-1-1 l-box">
+      <h2>Fires by State</h2>
+    </div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1-2 l-box">
+      <div id="bar", class = "vis-container"></div>
+    </div>
+    <div class="pure-u-1-2 l-box">
+      <p>As we can see, New South Wales, Northern Territory, Queensland
+        and Western Australia are the only states where a high number of fires have been recorded.
+        The nature of the fire depends somewhat on local topography.
+        Hilly/mountainous fires burn in areas which are usually densely forested.he land is less accessible and not conducive
+        to agriculture, thus many of these densely forested
+         areas have been saved from deforestation and are protected by national, state and other parks.
+      </p>
+    </div>
+
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1-1 l-box">
+      <div id="line_chart", class = "vis-container"></div>
+  </div>
+  </div>
+  <p></p>
+  <div class="pure-g">
+    <div class="pure-u-1-1 l-box">
+      <h2>Fire Radiative Power(FRP)</h2>
+      <p>The Fire Radiative Power (FRP) is a measure of the rate of radiant heat output from a fire. It has been
+        demonstrated in small-scale experimental fires that the FRP of a fire is related to the rate at which fuel is
+        being consumed. Fire Radiative Power is expressed in units of power, such as Watts (W). The below chart not only makes it easy
+        to see the frequency of fires in each state, but also how big that fire was.
+      </p>
+      <div id="bubble_chart", class = "vis-container"></div>
+  </div>
+</div>
+
 
 <script type="text/javascript">
 
-  var spec2 = "js/symbol_map.vg.json";
-  vegaEmbed('#symbol_map', spec2).then(function(result) {
+  var spec1 = "js/symbol_map.vg.json";
+  vegaEmbed('#symbol_map', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec3 = "ethnicity.vl.json";
+  vegaEmbed('#bar', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec4 = "genderDisparity.vl.json";
+  vegaEmbed('#line_chart', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec5 = "symptomsSorted.vl.json";
+  vegaEmbed('#bubble_chart', spec5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
 
