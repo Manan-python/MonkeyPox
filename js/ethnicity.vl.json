@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxREF.csv"
+  },
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "axis": {"grid": false}},
+    "y": {
+      "field": "variable",
+      "type": "nominal",
+      "axis": {"title": "Race/Ethnicity"}
+    },
+    "size": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "No of Cases",
+      "legend": {"clipHeight": 10},
+      "scale": {"domain": [0, 60]}
+    },
+    "color": {"field": "variable", "type": "nominal", "legend": null}
+  },
+  "config": {}
+}
