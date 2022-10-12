@@ -1,0 +1,13 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxGender.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "no_of_cases", "type": "quantitative"},
+    "color": {"field": "gender", "type": "nominal"}
+  },
+  "config": {}
+}

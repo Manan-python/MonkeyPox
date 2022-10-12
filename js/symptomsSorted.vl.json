@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar graph showing what activites consume what percentage of the day.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxSymptoms.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Numerator/datum.Denominator * 100",
+      "as": "PercentOfTotal"
+    }
+  ],
+  "height": {"step": 12},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "PercentOfTotal",
+      "type": "quantitative",
+      "title": "% of total Time"
+    },
+    "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"}
+  },
+  "config": {}
+}
