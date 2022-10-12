@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+  "height": 400,
   "title": "Total MonkeyPox Cases Per Million for each Country",
   "projection": {"type": "equalEarth"},
   "layer": [
