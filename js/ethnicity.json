@@ -3,8 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxREF.csv"
   },
-  "width": 600,
-  "height": 400,
+
   "mark": {
     "type": "circle",
     "opacity": 0.8,
