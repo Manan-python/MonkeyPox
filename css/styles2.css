@@ -18,7 +18,7 @@ h1{
 }
 
 h2{
-    color: rgb(202, 71, 31);
+    color: #4baccd;
     font-family: 'Titillium Web', sans-serif;
 }
 .heading-subtext{
@@ -27,7 +27,7 @@ h2{
 body {
     background: rgb(255, 255, 255);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
-    color: #4baccd;
+    color: #545454;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
