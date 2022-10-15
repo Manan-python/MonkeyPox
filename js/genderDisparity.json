@@ -1,13 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple donut chart with embedded data.",
+  "width":500,
+  "height":500,
+  "title": "Cases by Gender",
+  "description": "Cases by Gender",
   "data": {
-    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxGender.csv"
+    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxG.csv"
   },
-  "mark": {"type": "arc", "innerRadius": 50},
+  "transform": [{
+    "calculate": "datum.No_of_Cases/datum.Total * 100",
+    "as": "PercentOfTotal"
+  }],
+  "mark": {"type": "arc", "innerRadius": 150 },
   "encoding": {
-    "theta": {"field": "no_of_cases", "type": "quantitative"},
-    "color": {"field": "gender", "type": "nominal"}
+    "theta": {"field": "No_of_Cases", "type": "quantitative"},
+    "color": {"field": "Gender", "type": "nominal","scale": {"scheme": "set2"}},
+     "tooltip": [{"field": "No_of_Cases", "type": "quantitative"},{"field": "PercentOfTotal", "type": "quantitative","format": ".2f"}]
   },
   "config": {}
 }
