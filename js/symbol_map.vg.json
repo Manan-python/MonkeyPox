@@ -1,44 +1,95 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-  "height": 400,
-  "title": "Total MonkeyPox Cases Per Million for each Country",
-  "projection": {"type": "equalEarth"},
-  "layer": [
-    {
-      "data": {
-    "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  "data": {
+    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxByDate%20(1).csv",
+    "name": "myData"
   },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 400,
+      "title": "MonkeyPox: Total Cases per million",
+      "projection": {"type": "equalEarth"},
+      "layer": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "ne_110m_admin_0_countries"
+            }
+          },
+          "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
+        },
+        {
+          "data": {"name": "myData"},
+          "transform": [
+            {"filter": {"param": "time_brush"}},
+            {
+              "lookup": "iso_code",
+              "from": {
+                "data": {
+                  "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "ne_110m_admin_0_countries"
+                  }
+                },
+                "key": "properties.ISO_A3"
+              },
+              "as": "geo"
+            }
+          ],
+          "mark": {"type": "geoshape", "stroke": "black"},
+          "projection": {"type": "equalEarth"},
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "total_cases_per_million",
+              "type": "quantitative",
+              "legend": {"title": "Total Cases per Million"}
+            },
+            "tooltip": [
+              {"field": "date", "type": "temporal", "title": "Date"},
+              {
+                "field": "total_cases_per_million",
+                "title": "Total Cases per Million"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
-      "data": {
-    "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-  },
-
-  "transform": [
-    {
-      "lookup": "properties.ISO_A3",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxFinal.csv"
+      "width": "container",
+      "height": 60,
+      "mark": "bar",
+      "title": "Click on any bar in this bar chart to filter data based on date",
+      "params": [
+        {"name": "time_brush", "select": {"type": "point", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": "Month of the year"
         },
-        "key": "iso_code",
-        "fields": ["total_cases_per_million"]
+        "y": {
+          "aggregate": "sum",
+          "field": "new_cases",
+          "title": "Number of cases per million",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "date", "type": "temporal", "title": "Date"},
+          {
+            "aggregate": "sum",
+            "field": "new_cases",
+            "title": "Number of cases per million"
+          }
+        ]
       }
     }
   ],
-    "mark": {"type": "geoshape"},
-    "projection": {"type": "equalEarth"},
-  "encoding": {
-      "color": {
-        "field": "total_cases_per_million",
-        "type": "quantitative"
-      }
-
-  }
-    }
-  ]
+  "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }
