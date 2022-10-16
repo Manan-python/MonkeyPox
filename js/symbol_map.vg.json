@@ -6,7 +6,7 @@
   },
   "vconcat": [
     {
-      "width": 625,
+      "width": 600,
       "height": 400,
       "title": "MonkeyPox: Total Cases per million",
       "projection": {"type": "equalEarth"},
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "width": 625,
+      "width": 600,
       "height": 60,
       "mark": "bar",
       "title": "Click on any bar in this bar chart to filter data based on date",
