@@ -92,7 +92,7 @@
           voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <div id="bubble_chart", class = "vis-container"></div>
+      <div id="bar", class = "vis-container"></div>
   </div>
 </div>
 <p></p>
@@ -106,7 +106,7 @@
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <div id="so", class = "vis-container"></div>
+    <div id="bubble_chart", class = "vis-container"></div>
 </div>
 </div>
 
@@ -128,7 +128,7 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var spec5 = "js/symptomsSorted.json";
+  var spec5 = "js/symSort.json";
   vegaEmbed('#bubble_chart', spec5).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
