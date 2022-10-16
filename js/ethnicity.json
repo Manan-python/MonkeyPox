@@ -1,7 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width":500,
-  "height":500,
   "title": "Weekly Cases by Ethncitiy",
   "data": {"url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxREF2.csv"},
   "mark": "bar",
