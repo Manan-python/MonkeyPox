@@ -6,7 +6,7 @@
   },
   "vconcat": [
     {
-      "width": 700,
+      "width": 625,
       "height": 400,
       "title": "MonkeyPox: Total Cases per million",
       "projection": {"type": "equalEarth"},
