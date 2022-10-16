@@ -120,7 +120,7 @@ Severe cases occur more commonly among children and are related to the extent of
 exposure, patient health status and nature of complications. Underlying immune deficiencies
 may lead to worse outcomes.
     </p>
-    <div id="bubble_chart", class = "vis-container"></div>
+    <div id="syms", class = "vis-container"></div>
 </div>
 </div>
 
@@ -143,7 +143,7 @@ may lead to worse outcomes.
   }).catch(console.error);
 
   var spec5 = "js/syms.json";
-  vegaEmbed('#bubble_chart', spec5).then(function(result) {
+  vegaEmbed('#syms', spec5).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
