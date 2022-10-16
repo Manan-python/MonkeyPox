@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {"view": {"stroke": ""}},
   "width": 650,
-  "height": 200,
+  "height": 100,
   "data": {
     "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxLG.csv"
   },
@@ -23,6 +23,6 @@
     },
     "row": {"field": "Gender", "header": {"title": ""}},
     "text": {"field": "emoji", "type": "nominal"},
-    "size": {"value": 50}
+    "size": {"value": 25}
   }
 }
