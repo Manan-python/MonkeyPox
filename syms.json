@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "title": "Symptoms reported",
+  "description": "Bar graph showing symptoms reported in MonkeyPox",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Manan-python/MonkeyPox/main/data/MonkeyPoxSymptoms.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Numerator/datum.Denominator * 100",
+      "as": "PercentOfTotal"
+    }
+  ],
+      "mark": {
+        "type": "bar",
+        "color": "#F0A7A0"},
+  "encoding": {
+    "x": {
+      "field": "PercentOfTotal",
+      "type": "quantitative",
+      "title": "% of total reports"
+    },
+    "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"},
+    },
+  "config": {}
+}
