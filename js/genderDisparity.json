@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
   "title": "Cases by Gender",
   "description": "Cases by Gender",
   "data": {
