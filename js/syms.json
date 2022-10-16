@@ -14,8 +14,7 @@
     }
   ],
       "mark": {
-        "type": "bar",
-        "color": "#F0A7A0"},
+        "type": "bar"},
   "encoding": {
     "x": {
       "field": "PercentOfTotal",
