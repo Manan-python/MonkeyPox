@@ -23,5 +23,6 @@
       "title": "% of total reports"
     },
     "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"},
-    }
+  },
+  "config":{"title": {"font": "sans-serif", "fontSize": 14}}
 }

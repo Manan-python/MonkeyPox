@@ -16,5 +16,5 @@
     "color": {"field": "Gender", "type": "nominal","scale": {"scheme": "set2"}},
      "tooltip": [{"field": "No_of_Cases", "type": "quantitative"},{"field": "PercentOfTotal", "type": "quantitative","format": ".2f"}]
   },
-  "config": {}
+  "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }

@@ -26,5 +26,6 @@
       },
       "title": "Ethnicity"
     }
-  }
+  },
+  "config":{"title": {"font": "sans-serif", "fontSize": 14}}
 }
