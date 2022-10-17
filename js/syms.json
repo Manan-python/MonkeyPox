@@ -20,7 +20,10 @@
       "type": "quantitative",
       "title": "% of total reports"
     },
-    "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"}
+    "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"},
+    "tooltip":[{"field": "PercentOfTotal",
+    "type": "quantitative",
+    "title": "% of total reports"},{"field": "Symptom", "type": "ordinal", "sort": "-x"}]
   },
   "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }

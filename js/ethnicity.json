@@ -26,7 +26,17 @@
         "range": ["#e7ba52", "#C8E9A0", "#aec7e8", "#1f77b4"]
       },
       "title": "Ethnicity"
-    }
+    },
+    "tooltip": [
+      {"field": "variable",  "title": "Ethnicity"},
+      {"field": "date",
+      "type": "ordinal",
+      "title": "Week of the year"},
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Percentage of cases"
+      }
   },
   "config":{"title": {"font": "sans-serif", "fontSize": 14}}
 }
