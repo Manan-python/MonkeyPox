@@ -6,7 +6,7 @@ html {
     padding: 1em;
 }
 .l-box {
-    background-color: rgb(209, 209, 209);
+    background-color: #BDD1D3;
     padding: 25px 25px 25px 25px;
 }
 
@@ -15,7 +15,7 @@ h1{
     font-weight: 200;
     text-align: center;
     color: #117bad;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Times New Roman', cursive;
 }
 
 h2{
