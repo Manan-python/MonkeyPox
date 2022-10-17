@@ -13,16 +13,14 @@
       "as": "PercentOfTotal"
     }
   ],
-      "mark": {
-        "type": "bar",
-        "color": "#F0A7A0"},
+  "mark": {"type": "bar", "color": "#F0A7A0"},
   "encoding": {
     "x": {
       "field": "PercentOfTotal",
       "type": "quantitative",
       "title": "% of total reports"
     },
-    "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"},
+    "y": {"field": "Symptom", "type": "ordinal", "sort": "-x"}
   },
-  "config":{"title": {"font": "sans-serif", "fontSize": 14}}
+  "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }
