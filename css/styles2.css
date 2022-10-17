@@ -11,16 +11,16 @@ html {
 }
 
 h1{
-    font-size: 70px;
-    font-weight: 200;
+    font-size: 60px;
+    font-weight: 300;
     text-align: center;
     color: #117bad;
-    font-family: 'Times New Roman', cursive;
+    font-family: 'Times New Roman';
 }
 
 h2{
     color: #4baccd;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
 }
 .heading-subtext{
     text-align: center;
@@ -38,7 +38,8 @@ body {
 }
 
 p{
-    font-family: 'Montserrat', sans-serif ;
+    font-family: 'Noto Sans', sans-serif ;
+    font-weight: bolder;
 }
 
 .vis-container {
